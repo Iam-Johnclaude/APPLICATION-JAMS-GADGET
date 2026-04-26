@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".JamsGadgetApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="JamsGadget"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JamsGadget">
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.JamsGadget.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".LoginActivity" android:exported="false"/>
+        <activity android:name=".RegisterActivity" android:exported="false"/>
+        <activity android:name=".DashboardActivity" android:exported="false"/>
+        <activity android:name=".InventoryActivity" android:exported="false"/>
+        <activity android:name=".CalendarActivity" android:exported="false"/>
+        <activity android:name=".AddEditItemActivity" android:exported="false"/>
+        <activity android:name=".ItemDetailActivity" android:exported="false"/>
+        <activity android:name=".ReportsActivity" android:exported="false"/>
+        <activity android:name=".SettingsActivity" android:exported="false"/>
+        <activity android:name=".InstallmentsActivity" android:exported="false"/>
+        <activity android:name=".AddInstallmentActivity" android:exported="false"/>
+        <activity android:name=".InstallmentDetailActivity" android:exported="false"/>
+        <activity android:name=".ProfileActivity" android:exported="false"/>
+        <activity android:name=".ReportsAnalyticsActivity" android:exported="false"/>
+        <activity android:name=".NotificationsActivity" android:exported="false"/>
+
+    </application>
+
+</manifest>

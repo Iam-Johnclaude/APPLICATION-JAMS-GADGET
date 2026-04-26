@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- JamsGadget Brand Colors -->
+    <color name="brand_navy">#0f1923</color>
+    <color name="brand_card_surface">#1a2535</color>
+    <color name="brand_bg_light">#f0f2f5</color>
+    <color name="white">#ffffff</color>
+    <color name="brand_gold">#f5a623</color>
+    <color name="brand_green">#1D9E75</color>
+    <color name="brand_red">#E24B4A</color>
+    <color name="brand_blue">#378ADD</color>
+    <color name="muted_text">#8a9ab0</color>
+    <color name="text_muted">#8a9ab0</color>
+    <color name="dark_text">#1a2535</color>
+    <color name="border_color">#e2e6ec</color>
+
+    <!-- UI Helpers (Light variants for badges/backgrounds) -->
+    <color name="pill_gold_bg">#fff8ec</color>
+    <color name="stock_good_bg">#eaf7f1</color>
+    <color name="stock_alert_bg">#fff0f0</color>
+    <color name="icon_blue_bg">#e6f1fb</color>
+    <color name="icon_red_bg">#fcebeb</color>
+    <color name="icon_green_bg">#eaf7f1</color>
+    <color name="icon_gold_bg">#fff8ec</color>
+
+    <!-- Navigation & Status -->
+    <color name="nav_logout_red">#FF4444</color>
+    <color name="nav_muted_text">#8a9ab0</color>
+    <color name="brand_amber">#FFBF00</color>
+
+    <!-- Status Colors -->
+    <color name="status_active">@color/brand_green</color>
+    <color name="status_active_light">@color/icon_green_bg</color>
+    <color name="status_overdue">@color/brand_red</color>
+    <color name="status_overdue_light">@color/icon_red_bg</color>
+    <color name="status_paid">@color/brand_blue</color>
+    <color name="status_paid_light">@color/icon_blue_bg</color>
+
+    <!-- Legacy / Compatibility Colors -->
+    <color name="colorPrimary">#0f1923</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#f5a623</color>
+    <color name="primary">#0f1923</color>
+    <color name="primary_dark">#000000</color>
+    <color name="primary_light">#1a2535</color>
+    <color name="accent">#f5a623</color>
+    <color name="success">#1D9E75</color>
+    <color name="error">#E24B4A</color>
+    <color name="warning">#f5a623</color>
+    <color name="info">#378ADD</color>
+
+    <color name="bg_main">#0f1923</color>
+    <color name="text_primary">#ffffff</color>
+    <color name="text_secondary">#8a9ab0</color>
+
+    <color name="black">#000000</color>
+    <color name="card_surface">#1a2535</color>
+
+    <!-- Theme Specific -->
+    <color name="colorGold">#f5a623</color>
+    <color name="colorGoldDark">#e69500</color>
+    <color name="colorPageBg">#f0f2f5</color>
+    <color name="colorCardBg">#ffffff</color>
+    <color name="colorCardBorder">#e2e6ec</color>
+
+    <!-- Additional required colors -->
+    <color name="content_bg">#ffffff</color>
+    <color name="red_error">#E24B4A</color>
+    <color name="blue_info">#378ADD</color>
+    <color name="text_dark">#1a2535</color>
+    <color name="gray_divider">#e2e6ec</color>
+</resources>

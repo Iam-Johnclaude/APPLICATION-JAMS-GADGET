@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "75499950708",
+    "project_id": "jamsgadgetinventory-54c2e",
+    "storage_bucket": "jamsgadgetinventory-54c2e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:75499950708:android:9f72c522f9e931a79a3721",
+        "android_client_info": {
+          "package_name": "com.jamsgadget.inventory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "75499950708-bjjtj1bona2n2cenho4ih0gjj2njsftj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jamsgadget.inventory",
+            "certificate_hash": "340237c9f19638ff7075ba3ea1a670f825b9cc69"
+          }
+        },
+        {
+          "client_id": "75499950708-tkr6i4fuu185deqhlcaclg8h5rvuitv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhIpmAUkZXWYE6LduUUHYLzBPitqNEzEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "75499950708-tkr6i4fuu185deqhlcaclg8h5rvuitv5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

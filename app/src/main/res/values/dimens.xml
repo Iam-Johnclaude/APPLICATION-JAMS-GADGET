@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="card_gap">10dp</dimen>
+    <dimen name="stat_radius">14dp</dimen>
+    <dimen name="action_radius">12dp</dimen>
+    <dimen name="pill_radius">20dp</dimen>
+    <dimen name="content_top_radius">28dp</dimen>
+
+    <!-- Missing dimensions -->
+    <dimen name="badge_corner_radius">4dp</dimen>
+    <dimen name="section_corner_radius">20dp</dimen>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#0D1B2A</color>
+    <color name="primary_dark">#060D14</color>
+    <color name="primary_light">#1B2A3B</color>
+    <color name="accent">#1565C0</color>
+    <color name="accent_light">#1976D2</color>
+
+    <color name="colorPrimary">#0D1B2A</color>
+    <color name="colorPrimaryDark">#060D14</color>
+    <color name="colorAccent">#1565C0</color>
+
+    <color name="bg_main">#060D14</color>
+    <color name="bg_page">#060D14</color>
+    <color name="bg_card">#0D1B2A</color>
+    <color name="bg_toolbar">#060D14</color>
+    <color name="bg_surface">#0D1B2A</color>
+
+    <color name="text_primary">#E8EDF2</color>
+    <color name="text_secondary">#90A4AE</color>
+    <color name="text_hint">#546E7A</color>
+    <color name="text_on_accent">#FFFFFF</color>
+
+    <color name="stock_ok_bg">#0A2520</color>
+    <color name="stock_ok_text">#80CBC4</color>
+    <color name="stock_low_bg">#2A0A0A</color>
+    <color name="stock_low_text">#EF9A9A</color>
+    <color name="stock_neutral_bg">#1A1A1A</color>
+    <color name="stock_neutral_text">#90A4AE</color>
+
+    <color name="success">#00897B</color>
+    <color name="warning">#F57C00</color>
+    <color name="danger">#D32F2F</color>
+    <color name="info">#1565C0</color>
+
+    <color name="color_success">#00897B</color>
+    <color name="color_warning">#F57C00</color>
+    <color name="color_danger">#D32F2F</color>
+    <color name="color_info">#1565C0</color>
+
+    <!-- MAPPINGS FOR ADAPTERS AND OTHER UI COMPONENTS -->
+    <color name="colorSuccess">#00897B</color>
+    <color name="colorSuccessText">#80CBC4</color>
+    <color name="colorSuccessBg">#0A2520</color>
+    <color name="colorWarning">#F57C00</color>
+    <color name="colorWarningText">#FFB74D</color>
+    <color name="colorDanger">#D32F2F</color>
+    <color name="colorDangerText">#EF9A9A</color>
+    <color name="colorDangerBg">#2A0A0A</color>
+
+    <!-- UI ELEMENT COLORS (NIGHT MODE) -->
+    <color name="colorGold">#1565C0</color>
+    <color name="colorGoldDark">#0D47A1</color>
+    <color name="colorPageBg">#060D14</color>
+    <color name="colorCardBg">#0D1B2A</color>
+    <color name="colorCardBorder">#1B2A3B</color>
+    <color name="colorTextPrimary">#E8EDF2</color>
+    <color name="colorTextSecondary">#90A4AE</color>
+    <color name="colorTextHint">#546E7A</color>
+
+    <color name="divider_gray">#1B2A3B</color>
+
+    <!-- Status Colors -->
+    <color name="status_paid">#80CBC4</color>
+    <color name="status_pending">#FFB74D</color>
+    <color name="status_active">#00897B</color>
+    <color name="status_overdue">#D32F2F</color>
+
+    <color name="bg_paid_light">#0A2520</color>
+    <color name="bg_pending_light">#2A1A0A</color>
+
+    <!-- Installment Status Colors -->
+    <color name="status_active_light">#0A2520</color>
+    <color name="status_paid_light">#0A2520</color>
+    <color name="status_overdue_light">#2A0A0A</color>
+
+    <!-- Navigation Colors -->
+    <color name="brand_amber">#1565C0</color>
+    <color name="brand_amber_gold">#1976D2</color>
+    <color name="brand_navy_black">#060D14</color>
+    <color name="brand_bg_light">#060D14</color>
+    <color name="nav_inactive_icon">#546E7A</color>
+    <color name="nav_inactive_text">#546E7A</color>
+    <color name="nav_muted_text">#546E7A</color>
+    <color name="nav_active_bg">#1B2A3B</color>
+    <color name="nav_logout_red">#D32F2F</color>
+
+    <color name="sheet_bg_gray">#060D14</color>
+    <color name="border_color">#1B2A3B</color>
+    <color name="divider_color">#1B2A3B</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>
