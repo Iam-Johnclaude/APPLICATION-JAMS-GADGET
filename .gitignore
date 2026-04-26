@@ -1,15 +1,34 @@
 *.iml
 .gradle
 /local.properties
+local.properties
+
+# IDE
 /.idea/caches
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+
+# OS
 .DS_Store
+
+# Build artifacts
 /build
 /captures
 .externalNativeBuild
 .cxx
-local.properties
+
+# Secrets and credentials
+/app/google-services.json
+google-services.json
+key.properties
+keystore.properties
+secrets.properties
+.env
+.env.*
+*.jks
+*.keystore
+*.p12
+*.pem
