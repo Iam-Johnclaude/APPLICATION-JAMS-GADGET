@@ -1,51 +1,64 @@
 Jams Gadget Inventory 📱💻
-A comprehensive Retail & Credit Management System built for Android. This application empowers gadget business owners to manage their inventory, track customer installments, and monitor the financial health of their business in real-time.
 
-🚀 Key Features
+About the Application
 
-1. Advanced Installment & Credit Tracking
-•Live Compute Engine: Automatically calculates remaining balances and monthly amortizations as you input data.
-•Smart Due-Date Logic: Automatically assigns recurring monthly due dates based on the initial sale date.
-•Status Management: Categorize accounts into Active, Overdue, or Paid to prioritize collection efforts.
-•Financial Dashboard: View total outstanding business balances at a glance.
+Jams Gadget Inventory is a specialized Retail & Credit Management System designed for gadget businesses that offer flexible payment plans. Unlike a simple inventory app, this system bridges the gap between Stock Management and Customer Debt Tracking.
 
-2. Smart Inventory Integration
-•Product Picker: Seamlessly link gadget stock to installment plans using a searchable bottom-sheet dialog.
-•Category Normalization: Automatically groups products (e.g., "Smartphones", "Tablets") for a cleaner user experience.
-•Visual Tracking: Displays product images, brands, and categories within transaction records.
+It is built to help business owners move away from manual record-keeping by providing a real-time dashboard of who owes money, how much is outstanding across the entire business, and which payments are overdue.
 
-3. Modern User Experience
-•Adaptive Themes: Includes a premium "Navy & Gold" Dark Mode for professional use in any lighting.
-•Real-Time Sync: Powered by Firebase, ensuring all data is instantly updated across multiple devices.
-•Interactive Visuals: Uses MPAndroidChart to visualize sales trends and collection ratios.
-•Android 12+ Splash Screen: A smooth, branded entry into the application.
+Core Features
+•Live Installment Calculator: Automatically computes monthly amortization, balances, and due dates as you type.
+•Smart Item Picker: Links installment plans directly to your existing gadget stock with a searchable bottom-sheet interface.
+•Financial Health Dashboard: View your "Total Outstanding Balance" and status counters (Active/Overdue/Paid) at a glance.
+•Cloud Synchronization: Powered by Firebase, ensuring your data is accessible on any device and backed up instantly.
+•Automated Status Tracking: Intelligent logic flags "Overdue" accounts automatically based on payment dates.
+•Professional UI: Includes a dedicated "Navy & Gold" Dark Mode and smooth animations for a premium business feel.
 
-🛠 Tech Stack
-•Language: Java / Kotlin
-•Database: Firebase Cloud Firestore (Real-time data storage)
-•Authentication: Firebase Auth
-•Image Loading: Glide (Optimized image caching and processing)
-•UI Components: Material Design 3, CoordinatorLayout, ViewBinding
-•Charts: MPAndroidChart
-•Reminders: Integrated with Google Calendar API and Android Mail for automated notifications.
+How to Use the Application
+1. Managing Your Dashboard
+When you open the app, you are greeted with the Installments Dashboard.
+•The Top Summary: Shows the total money currently "on the street" (uncollected debt).
+•Status Tabs: Use the "Pill" filters to switch between Active (paying), Overdue (late), and Paid (completed) customers.
 
-📸 Presentation Walkthrough
-If you are evaluating this project for a presentation or demonstration, follow this recommended flow:
-1.Dashboard: Show the "Total Outstanding Balance" to highlight business-level insights.
-2.Creation: Open AddInstallmentActivity and demonstrate the Live Compute feature by changing the down payment.
-3.Selection: Use the Item Picker to show how it pulls from the live inventory.
-4.Filtering: Toggle between the "Active" and "Overdue" tabs to show how the app manages collection priority.
+2. Adding a New Installment (Sale)
+  1.Tap the Floating Action Button (+) on the main screen.
+  2.Select an Item: Tap "Select Item" to open your inventory. Use the search bar or category chips (Smartphones, Accessories, etc.) to find the gadget.
+  3.Enter Customer Info: Fill in the name, contact number, and address.
+  4.Set Payment Terms:
+    ◦Enter the Total Price.
+    ◦Enter the Down Payment (the app will instantly show the remaining balance).
+    ◦Choose the Duration (1 to 12 months). The app will automatically calculate the Monthly Payment.
+  5.Save: Tap "Save Installment." The record is now live and synced.
 
-📦 Installation
-1.Clone the repository:
-Shell Script
-git clone https://github.com/your-username/JamsGadgetInventory.git
-2.Open the project in Android Studio.
-3.Connect your own Firebase Project and download the google-services.json file into the app/ directory.
-4.Sync the project with Gradle files.
-5.Run on an emulator or physical device (API level 24+ recommended).
+3. Tracking & Updating Payments
+  1.Click on any customer in the list to open their Detail View.
+  2.Review their balance and payment history.
+  3.When a customer pays, update their Total Paid amount. If the balance reaches 0, the app automatically moves them to the Paid category.
 
-🤝 Contributing
-Contributions are welcome! Feel free to open an issue or submit a pull request for new features or bug fixes.
-⚖️ License
-This project is developed for educational/business management purposes. [Choose your License, e.g., MIT]
+4. Handling Overdue Accounts
+Keep an eye on the Overdue tab. The app highlights these records in red. You can use the contact information stored in their profile to reach out via phone or email directly from your device.
+
+Technical Requirements
+•Android OS: Version 7.0 (Nougat) or higher.
+•Internet: Required for real-time Firebase synchronization.
+•Permissions: Camera (for product photos) and Internet access.
+
+
+
+Developer Setup
+1.Clone this repository. 
+2.Add your google-services.json file from Firebase to the /app folder.
+3.Enable Firestore Database and Firebase Authentication in your console.
+4.Build and run using Android Studio.
+
+
+
+
+
+
+
+
+
+
+
+  
