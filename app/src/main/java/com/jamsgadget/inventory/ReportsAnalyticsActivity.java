@@ -199,9 +199,10 @@ public class ReportsAnalyticsActivity extends AppCompatActivity {
         for (int i = 0; i < count; i++) {
             Item item = sortedItems.get(i);
             entries.add(new BarEntry(i, (float) (item.getPrice() * item.getQuantity())));
-            String shortName = item.getName();
-            if (shortName.length() > 10) shortName = shortName.substring(0, 8) + "...";
-            labels.add(shortName);
+            String name = item.getName();
+            // Show up to 15 characters to avoid excessive truncation
+            if (name.length() > 15) name = name.substring(0, 13) + "..";
+            labels.add(name);
         }
 
         BarDataSet dataSet = new BarDataSet(entries, "Total Value (Price x Stock)");
@@ -232,8 +233,10 @@ public class ReportsAnalyticsActivity extends AppCompatActivity {
         xAxis.setGranularity(1f);
         xAxis.setLabelCount(count);
         xAxis.setTextColor(TEXT_COLOR_MUTED);
+        xAxis.setTextSize(9f);
         xAxis.setValueFormatter(new IndexAxisValueFormatter(labels));
-        xAxis.setLabelRotationAngle(-30);
+        xAxis.setLabelRotationAngle(-45); // Steep rotation to fit longer names
+        xAxis.setCenterAxisLabels(false);
 
         YAxis leftAxis = barChart.getAxisLeft();
         leftAxis.setDrawGridLines(true);
@@ -250,7 +253,10 @@ public class ReportsAnalyticsActivity extends AppCompatActivity {
         });
 
         barChart.getAxisRight().setEnabled(false);
-        barChart.setExtraBottomOffset(20f); 
+        
+        // Increase bottom offset even more to accommodate longer rotated labels
+        barChart.setExtraOffsets(0, 0, 0, 120f);
+
         barChart.animateY(1000, Easing.EaseInOutQuad);
         barChart.invalidate();
     }

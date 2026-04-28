@@ -95,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Home Credit"
+            android:text="In-House Financing"
             android:textColor="#94A3B8"
             android:textSize="11sp"
             android:textStyle="bold"

@@ -62,7 +62,6 @@ public class AddInstallmentActivity extends AppCompatActivity {
     private TextView tvMonthlyPayment, tvSummaryBalance, tvSummaryMonthly,
             tvSummaryDueDay, tvSummaryTotalPayments;
     private LinearLayout layoutItemSelector;
-    private ChipGroup chipGroupPaymentType;
     private Button btnSave;
 
     private ImageView imgSelectedItem;
@@ -123,7 +122,6 @@ public class AddInstallmentActivity extends AppCompatActivity {
         tvSummaryDueDay = findViewById(R.id.tvSummaryDueDay);
         tvSummaryTotalPayments = findViewById(R.id.tvSummaryTotalPayments);
         layoutItemSelector = findViewById(R.id.layoutItemSelector);
-        chipGroupPaymentType = findViewById(R.id.chipGroupPaymentType);
         btnSave = findViewById(R.id.btnSave);
 
         imgSelectedItem = findViewById(R.id.imgSelectedItem);
@@ -380,7 +378,7 @@ public class AddInstallmentActivity extends AppCompatActivity {
             map.put("monthlyPayment", monthly);
             map.put("startDate", new Timestamp(startDateCalendar.getTime()));
             map.put("nextDueDate", new Timestamp(firstDueDate.getTime())); 
-            map.put("paymentType", getSelectedPaymentType());
+            map.put("paymentType", "Home Credit");
             map.put("status", "Active");
             map.put("totalPaid", down);
             map.put("monthsPaid", 0);
@@ -449,12 +447,6 @@ public class AddInstallmentActivity extends AppCompatActivity {
                 return null;
             }
         }.execute();
-    }
-
-    private String getSelectedPaymentType() {
-        int id = chipGroupPaymentType.getCheckedChipId();
-        if (id == R.id.chipHomeCredit) return "Home Credit";
-        return "Other";
     }
 
     private double parseDouble(String s) {

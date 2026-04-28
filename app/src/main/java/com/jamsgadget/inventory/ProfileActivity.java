@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
@@ -24,8 +26,8 @@ import java.util.Map;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private TextInputEditText etFullName, etEmail, etPassword;
-    private TextInputLayout tilFullName, tilEmail, tilPassword;
+    private TextInputEditText etFullName, etEmail, etPassword, etCurrentPassword;
+    private TextInputLayout tilFullName, tilEmail, tilPassword, tilCurrentPassword;
     private TextView tvHeaderName, tvHeaderEmail, tvInitial;
     private MaterialButton btnUpdateProfile, btnUpdatePassword;
     private ProgressBar progressBar;
@@ -61,9 +63,11 @@ public class ProfileActivity extends AppCompatActivity {
         etFullName = findViewById(R.id.etFullName);
         etEmail = findViewById(R.id.etEmail);
         etPassword = findViewById(R.id.etPassword);
+        etCurrentPassword = findViewById(R.id.etCurrentPassword);
         tilFullName = findViewById(R.id.tilFullName);
         tilEmail = findViewById(R.id.tilEmail);
         tilPassword = findViewById(R.id.tilPassword);
+        tilCurrentPassword = findViewById(R.id.tilCurrentPassword);
         tvHeaderName = findViewById(R.id.tvHeaderName);
         tvHeaderEmail = findViewById(R.id.tvHeaderEmail);
         tvInitial = findViewById(R.id.tvInitial);
@@ -157,7 +161,16 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void updatePassword() {
+        String currentPassword = etCurrentPassword.getText() != null ? etCurrentPassword.getText().toString().trim() : "";
         String newPassword = etPassword.getText() != null ? etPassword.getText().toString().trim() : "";
+
+        tilCurrentPassword.setError(null);
+        tilPassword.setError(null);
+
+        if (TextUtils.isEmpty(currentPassword)) {
+            tilCurrentPassword.setError("Current password is required");
+            return;
+        }
 
         if (TextUtils.isEmpty(newPassword) || newPassword.length() < 6) {
             tilPassword.setError("Password must be at least 6 characters");
@@ -165,13 +178,25 @@ public class ProfileActivity extends AppCompatActivity {
         }
 
         setLoading(true);
-        currentUser.updatePassword(newPassword).addOnCompleteListener(task -> {
-            setLoading(false);
-            if (task.isSuccessful()) {
-                etPassword.setText("");
-                Toast.makeText(ProfileActivity.this, "Password updated successfully", Toast.LENGTH_SHORT).show();
+
+        // Re-authenticate user before updating password
+        AuthCredential credential = EmailAuthProvider.getCredential(currentUser.getEmail(), currentPassword);
+        currentUser.reauthenticate(credential).addOnCompleteListener(reAuthTask -> {
+            if (reAuthTask.isSuccessful()) {
+                currentUser.updatePassword(newPassword).addOnCompleteListener(task -> {
+                    setLoading(false);
+                    if (task.isSuccessful()) {
+                        etPassword.setText("");
+                        etCurrentPassword.setText("");
+                        Toast.makeText(ProfileActivity.this, "Password updated successfully", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(ProfileActivity.this, "Password update failed: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
             } else {
-                Toast.makeText(ProfileActivity.this, "Password update failed. You may need to re-login.", Toast.LENGTH_LONG).show();
+                setLoading(false);
+                tilCurrentPassword.setError("Incorrect current password");
+                Toast.makeText(ProfileActivity.this, "Re-authentication failed. Please check your current password.", Toast.LENGTH_LONG).show();
             }
         });
     }
